@@ -7,7 +7,7 @@ int main(){
     // regarding the datatype like (int,char,float)
    int age=21,new_age,arr[5]={12,1,2,4,11},i;
    float avg;
-   char name[]="Nitin Pandey",str[20];
+   char name[]="Nitin Pandey";
    cout << "Hello " << name<<"\nyour age is: "<< age<<"\nWhat's your new age: ";
    cin>>new_age;
    avg=(float)(age+new_age)/2;
