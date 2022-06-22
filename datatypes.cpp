@@ -5,9 +5,10 @@ void func(){
 }
 int main(){
     // regarding the datatype like (int,char,float)
-   int age=21,new_age,arr[5]={12,1,2,4,11},i;
-   float avg;
-   char name[]="Nitin Pandey",str[20];
+   int age=21,new_age,arr[5]={12,1,2,4,11},i;  // It'll take integer type values.
+   float avg;                                  // It'll take floting point values.
+   char name[]="Nitin Pandey";                 // Char is a datatype which will take single character as value and can take whole string with the spaces if array is provided as variable to it.
+   string str;                                 // string datatype will take the string as value. And it'll be terminated whenever space is given.
    cout << "Hello " << name<<"\nyour age is: "<< age<<"\nWhat's your new age: ";
    cin>>new_age;
    avg=(float)(age+new_age)/2;
@@ -21,4 +22,6 @@ int main(){
    }
    cout<<"}"<<endl;
    func();
+   cin>>str;
+   cout<<"the string is: "<<str<<endl;
 }
