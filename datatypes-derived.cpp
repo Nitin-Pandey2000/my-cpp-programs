@@ -42,10 +42,10 @@ using namespace std;
         again1:
         cout<<endl<<"Are you sure to set the same: Y/N "<<endl;
         cin>>x;
-        if(x=="Y"){
+        if(x=="Y"||x=="y"){
             goto further;
         }
-        else if (x=="N"){
+        else if (x=="N"||x=="n"){
             goto again;
         }
         else{
