@@ -11,7 +11,7 @@ using namespace std;
             string model="ShineCVT";                         //Class is a definition of an obj.
             string colour="DarkBlue";                        //Object is an instance of a class.
             void getID(){
-                cout<<enginID<<endl;
+                cout<<"Your Engin ID is: "<<enginID<<endl;
             }
         protected:
             double regID;
@@ -24,10 +24,10 @@ using namespace std;
             void checkRegID(int regNo){
                 again: 
                  if(regNo==regID){
-                 cout<<"Woohhoo! Your Reg. No. is matching: "<<endl;                
+                 cout<<"Woohhoo! Your Reg. No. is matching."<<endl;                
                  }
                  else{
-                 cout<<"Ooops wrong password try again: ";
+                 cout<<"Ooops wrong ID try again: ";
                  cin>>regNo;
                  goto again;
                  }
@@ -35,13 +35,29 @@ using namespace std;
     };
     int main(){
         int regNo;
+        string x;
+        again:
         cout<<"Enter Registration ID: "<<endl;
         cin>>regNo;
+        again1:
+        cout<<endl<<"Are you sure to set the same: Y/N "<<endl;
+        cin>>x;
+        if(x=="Y"){
+            goto further;
+        }
+        else if (x=="N"){
+            goto again;
+        }
+        else{
+            cout<<"Unvalid Response. Try again: "<<endl;
+            goto again1;
+        }
+        further:
         car obj;
         reg obj_Reg;
         obj.getID();
         obj_Reg.setRegID(regNo);
-        cout<<obj.company<<'\n'<<obj.model<<'\n'<<obj.colour<<'\n'<<"Enter Your Registered no.: ";
+        cout<<"Company: "<<obj.company<<'\n'<<"Model Name: "<<obj.model<<'\n'<<"Colour: "<<obj.colour<<'\n'<<"To verify, Enter Your Registered no.: ";
         cin>>regNo;
         cout<<endl;
         obj_Reg.checkRegID(regNo);
