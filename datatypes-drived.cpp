@@ -21,9 +21,16 @@ using namespace std;
             void setRegID(int regNo){
                 regID=regNo;
             }
-            void getRegID(int regNo){
-                regID=regNo;
-                cout<<regID<<endl;
+            void checkRegID(int regNo){
+                again: 
+                 if(regNo==regID){
+                 cout<<"Woohhoo! Your Reg. No. is matching: "<<endl;                
+                 }
+                 else{
+                 cout<<"Ooops wrong password try again: ";
+                 cin>>regNo;
+                 goto again;
+                 }
            }
     };
     int main(){
@@ -34,6 +41,9 @@ using namespace std;
         reg obj_Reg;
         obj.getID();
         obj_Reg.setRegID(regNo);
-        cout<<obj.company<<'\n'<<obj.model<<'\n'<<obj.colour<<'\n';
+        cout<<obj.company<<'\n'<<obj.model<<'\n'<<obj.colour<<'\n'<<"Enter Your Registered no.: ";
+        cin>>regNo;
+        cout<<endl;
+        obj_Reg.checkRegID(regNo);
         return 0;
     }
