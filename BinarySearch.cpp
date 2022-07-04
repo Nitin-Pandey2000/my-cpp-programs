@@ -7,10 +7,10 @@ int main(){
     l=0;
     while(l<=h){
         if((h+l)%2!=0){
-            mid=(h+l-1)/2;
+            mid=/*(h+l-1)/2*/{l+(h-l-1)/2};   // reason behind this logic is that in case of maximum size limitation the memory alloted to value is limited.
         }
         else{
-            mid=(h+l)/2;
+            mid=l+(h-l)/2;   // simmilar method as that in if condition's statement.
         }
         if(k>arr[mid]){
             l=mid+1;
